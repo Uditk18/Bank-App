@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.app.bank.pojo.BankAccount;
 import com.app.bank.pojo.CurrentAccount;
 import com.app.bank.pojo.Customer;
 import com.app.bank.pojo.SavingsAccount;
@@ -20,7 +19,7 @@ public class BankAccountCollection {
 		savDB.put(1002, new SavingsAccount(1002, new Customer("Udit", "8525425022", "uditk18@gmail.com", "09/07/1996"),
 				2000, true));
 		savDB.put(1003, new SavingsAccount(1003,
-				new Customer("Mayur", "8545201232", "mayurkiyaan8@gmail.com", "15/07/1995"), 1500, false));
+				new Customer("Mayur", "8545201232", "mayurkiyaan8@gmail.com", "15/07/1995"), 15000, false));
 		return savDB.values();
 
 	}
@@ -34,25 +33,28 @@ public class BankAccountCollection {
 
 	}
 
-	public BankAccount withdraw(int accountNumber, double amount) {
+	public double withdraw(int accountNumber, double amount) {
+		Integer i = accountNumber;
+		if (savDB.get(i).getAccountBalance() > amount) {
+			savDB.get(i).setAccountBalance(savDB.get(i).getAccountBalance() - amount);
 
-		if (savDB.get(accountNumber).getAccountBalance() > amount) {
-			savDB.get(accountNumber).setAccountBalance(savDB.get(accountNumber).getAccountBalance() - amount);
-
-			return savDB.get(accountNumber);
+			return savDB.get(i).getAccountBalance();
 		}
 
 		else
-			return null;
+			return -1;
 	}
 
-	public void deposit(int accountNumber, double amount) {
+	public double deposit(int accountNumber, double amount) {
 		Integer i = accountNumber;
-		if (savDB.get(i) != null) {
+		if (savDB.get(i).getAccountBalance() > amount) {
 			savDB.get(i).setAccountBalance(savDB.get(i).getAccountBalance() + amount);
-		} else {
-			System.out.println("Error");
+
+			return savDB.get(i).getAccountBalance();
 		}
+
+		else
+			return -1;
 	}
 
 	public void transfer(int accountNumber1, int accountNumber2, double amount) {

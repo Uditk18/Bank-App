@@ -10,29 +10,22 @@
 <body>
 <h2>Successfully withdrawn!!</h2>
 	<table border="1">
-		<%-- <tr>
-			<th>Name</th>
-			<td>${banker.accountHolder.customerName }</td>
-		</tr> --%>
 		<tr>
-			<th>Account Number</th>
-			<td>${banker.accountNo }</td>
+			<th>Name</th>
+			<td>${banker.accountHolder.customerName}</td>
 		</tr>
-		<%-- <tr>	
-			<th>Account Balance</th>
-			<td>${banker.accountBalance }</td>
+		
+		<tr>
+			<th> Account number </th>
+			<td> ${banker.accountNo}</td>
 			
 		</tr>
-	 --%>
-		<%-- <jstl:if test="${empty banker}">
-		Error</jstl:if>
-		
-		<jstl:if test="${not empty banker}"> 
-		 --%>
-		 
-		
+		<tr>	
+			<th>Account Balance</th>
+			<td>${banker.accountBalance}</td>
+			
+		</tr>
 	
-<%--  		</jstl:if>
- --%> 	</table>
+	 	</table>
 </body>
 </html>

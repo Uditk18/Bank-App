@@ -9,17 +9,15 @@
 <body>
 	<h1>Deposit</h1>
 	<h3>Enter the Details:</h3>
-	<table>
-		<tr>
-			<td>Account Number</td>
-			<td><input type="number" name="accno"></td>
-		</tr>
-		<tr>
-			<td>Amount</td>
-			<td><input type="number" name="amount"></td>
-		</tr>
-		<tr>
-			<td><a href="deposit1.app"><input type="submit" value="deposit"></a>
-	</table>
+	<form action="withdraw1.app" method="post">
+		Account Number
+				<input type="number" name="accno">
+				Amount
+				<input type="number" name="amount">
+			<input type="submit" value="submit"> 
+		
+	</form>
+	
 </body>
 </html>
+

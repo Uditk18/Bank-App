@@ -8,20 +8,26 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h2>Deposit Successful!!</h2>
 	<table>
 		<tr>
 			<th>Name</th>
-			<th>Account Number</th>
-			<th>Account Balance</th>
-		</tr>
-	<jstl:forEach var="banker" items="${requestScope.banker}">
-		
-		<tr>
 			<td>${banker.accountHolder.customerName }</td>
+		</tr>
+		<tr>
+			<th>Account Number</th>
 			<td>${banker.accountNo }</td>
+		</tr>
+		<tr>
+			<th>Account Balance</th>
 			<td>${banker.accountBalance }</td>
 		</tr>
-	</jstl:forEach>
+	
+		
+			
+			
+		
+	
 		
 	</table>
 </body>

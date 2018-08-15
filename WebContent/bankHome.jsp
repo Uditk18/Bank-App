@@ -32,7 +32,7 @@ h1 {
 			
 		</tr>
 		<tr>
-			<td><a href="deposit.app">Deposit</a></td>
+			<td><a href="deposit1.jsp">Deposit</a></td>
 		</tr>
 		<tr>
 			<td><a href="fund.app">Fund Transfer</a></td>
