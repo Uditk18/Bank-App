@@ -7,23 +7,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Fund Transfer</h1>
-	<h3>Enter the Details for fund transfers : </h3>
-	<table>
-		<tr>
-			<td>Enter Account Number FROM which you want to transfer funds : </td>
-			<td><input type="number" name="accFrom"></td>
-		</tr>
-		<tr>
-			<td>Enter Account Number TO which you want to transfer funds : </td>
-			<td><input type="number" name="accTo"></td>
-		</tr>
-		<tr>
-			<td>Amount</td>
-			<td><input type="number" name="amount"></td>
-		</tr>
-		<tr>
-			<td><a href="withdraw1.app"><input type="submit" value="fund"></a>
-	</table>
+<form action="fundTransfer1.app" method="post">
+<div align="center"><h2>Fund Transfer</h2></div>
+<table>
+<tr>
+	<td>Enter Account Number FROM which you want to transfer funds : </td>
+	<td><input type="text" name="senderAccountNumber"></td>
+</tr>
+<tr>
+	<td>Enter Account Number TO which you want to transfer funds : </td>
+	<td><input type="text" name="receiverAccountNumber"></td>
+</tr>
+<tr>
+	<td>Enter Amount: </td>
+	<td><input type="number" name="transferAmount" min=1></td>
+</tr>
+<tr>
+<td><input type="submit" value="Send"></td>
+</tr>
+</table>
+</form>
 </body>
 </html>
